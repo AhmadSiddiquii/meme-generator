@@ -414,7 +414,7 @@ main .inner-content-box {
   }
   .box-left .add-btn {
     padding: 7px 13px;
-    background-color: var(--light-200);
+    background-color: var(--light);
     border-radius: 6px;
   }
   .template-selector-wrapper.template-selector {
