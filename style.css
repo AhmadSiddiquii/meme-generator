@@ -1,6 +1,6 @@
 :root {
   --primary: #5300db;
-  --primary-100: #5300DB17;
+  --primary-100: #5300db17;
   --white: #fff;
   --light: #f2f2f2;
   --light-200: #eaeaea;
@@ -77,7 +77,6 @@ main .main-head {
   padding-bottom: 40px;
 }
 main .inner-content-box {
-  background-color: var(--white);
   border: 1px solid var(--light-200);
 }
 
@@ -85,6 +84,7 @@ main .inner-content-box {
   padding: 27px 15px 18px;
   border-bottom: 1px solid var(--light-500);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
@@ -158,13 +158,17 @@ main .inner-content-box {
   border-color: var(--danger);
 }
 
+.box-left-wrapper {
+  background-color: #fff;
+}
+
 .box-left {
-  border-right: 1px solid var(--light-500);
+  background-color: var(--white);
 }
 .box-left .box-left-body {
   margin: 10px 15px;
   overflow-y: scroll;
-  height: 420px;
+  height: 450px;
 }
 .box-left .box-left-body .inner-box {
   border: 1px solid var(--light);
@@ -223,6 +227,9 @@ main .inner-content-box {
 
 .main-box {
   padding: 19px;
+  background-color: var(--white);
+  border-right: 1px solid var(--light-500);
+  border-left: 1px solid var(--light-500);
 }
 .main-box .banner-img {
   padding-bottom: 12px;
@@ -237,11 +244,10 @@ main .inner-content-box {
 .main-box .actions {
   display: flex;
   justify-content: space-between;
-  gap: 13px;
   padding-bottom: 26px;
 }
 .main-box .actions .button-light {
-  width: 100%;
+  width: calc(25% - 13px);
   background-color: var(--primary-100);
   padding: 5px 10px;
   display: flex;
@@ -254,7 +260,7 @@ main .inner-content-box {
 }
 
 .box-right {
-  border-left: 1px solid var(--light-500);
+  background-color: var(--white);
   /* Style for the template selector container */
 }
 .box-right .btns-wrapper {
@@ -275,6 +281,7 @@ main .inner-content-box {
   background-color: var(--light-200);
   padding: 8px;
   margin: 9px;
+  margin-top: 0;
 }
 .box-right .template-selector {
   display: flex;
@@ -296,9 +303,69 @@ main .inner-content-box {
   border-color: var(--primary);
 }
 
+/* Your existing styles */
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown toggle/button */
+.dropdown-toggle {
+  background-color: #fff;
+  border: 1px solid var(--light-300);
+  padding: 2px 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Main selected icon */
+.selected-icon {
+  margin-right: 10px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Show dropdown content */
+.show {
+  display: block;
+}
+
 @media (max-width: 1399px) {
+  .template-selector-wrapper .template-selector {
+    max-height: 140px;
+  }
+}
+@media (max-width: 1199px) {
+  main .inner-content-box {
+    border: none;
+  }
   .main-box {
-    border-bottom: 1px solid var(--light-500);
+    border: 1px solid var(--light-200);
   }
   .main-box .banner-img img {
     max-height: 100%;
@@ -306,22 +373,49 @@ main .inner-content-box {
   .box-head {
     min-height: 72px;
   }
+  .box-right {
+    border: 1px solid var(--light-200);
+  }
   .box-right .template-selector {
     max-height: 210px;
   }
-}
-@media (max-width: 767px) {
-  .main-box .actions {
-    flex-wrap: wrap;
-  }
-  .main-box .actions .button-light {
-    width: 48%;
+  .box-left-wrapper {
+    background-color: transparent;
   }
   .box-left {
-    border: 1px solid var(--light-500);
+    border: 1px solid var(--light-200);
+  }
+}
+@media (max-width: 767px) {
+  .box-head {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .main-box {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .main-box .actions {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+  .main-box .actions .button-light {
+    width: calc(25% - 8px);
+  }
+  .box-left {
+    border-top: 0;
+  }
+  .box-left .box-head {
+    padding-top: 0;
   }
   .box-left .box-left-body {
     height: 100%;
+    margin-top: 0;
+  }
+  .box-left .add-btn {
+    padding: 7px 13px;
+    background-color: var(--light-200);
+    border-radius: 6px;
   }
   .template-selector-wrapper.template-selector {
     height: 100%;
@@ -329,7 +423,24 @@ main .inner-content-box {
     max-height: max-content;
   }
   .box-right {
-    border-right: 1px solid var(--light-500);
+    margin-top: 14px;
+  }
+  .box-right .box-right-body {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .box-right .box-right-body label {
+    padding-bottom: 10px;
+  }
+  .box-right .btns-wrapper {
+    border-bottom: 0;
+  }
+  .box-right .btns-wrapper button {
+    width: 50%;
+  }
+  .box-right .template-selector-wrapper {
+    padding: 0;
+    background-color: transparent;
   }
   .box-right .template-selector {
     height: 100%;
@@ -339,6 +450,9 @@ main .inner-content-box {
 }
 @media (max-width: 576px) {
   .main-box .actions .button-light {
-    width: 100%;
+    justify-content: center;
+  }
+  .main-box .actions .button-light span {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

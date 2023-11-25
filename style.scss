@@ -1,6 +1,6 @@
 :root {
   --primary: #5300db;
-  --primary-100: #5300DB17;
+  --primary-100: #5300db17;
   --white: #fff;
   --light: #f2f2f2;
   --light-200: #eaeaea;
@@ -75,7 +75,6 @@ main {
     padding-bottom: 40px;
   }
   .inner-content-box {
-    background-color: var(--white);
     border: 1px solid var(--light-200);
   }
 }
@@ -84,6 +83,7 @@ main {
   padding: 27px 15px 18px;
   border-bottom: 1px solid var(--light-500);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 10px;
   button {
@@ -127,7 +127,7 @@ main {
     color: var(--light-500);
   }
 }
-.btn.button-primary{
+.btn.button-primary {
   padding: 13px;
   background-color: var(--primary);
   color: var(--white);
@@ -136,29 +136,32 @@ main {
   justify-content: center;
   gap: 5px;
   margin-bottom: 11px;
-  img{
+  img {
     height: 28px;
     width: 28px;
   }
 }
-.btn.button-primary-outlined{
+.btn.button-primary-outlined {
   padding: 13px;
   background-color: var(--white);
   color: var(--primary);
   gap: 5px;
   border: 1px solid var(--primary);
   margin-bottom: 11px;
-  &.danger{
+  &.danger {
     color: var(--danger);
     border-color: var(--danger);
   }
 }
+.box-left-wrapper{
+  background-color: #fff;
+}
 .box-left {
-  border-right: 1px solid var(--light-500);
+  background-color: var(--white);
   .box-left-body {
     margin: 10px 15px;
     overflow-y: scroll;
-    height: 420px;
+    height: 450px;
     .inner-box {
       border: 1px solid var(--light);
       border-radius: 6px;
@@ -216,39 +219,40 @@ main {
     }
   }
 }
-.main-box{
+.main-box {
   padding: 19px;
-  .banner-img{
+  background-color: var(--white);
+  border-right: 1px solid var(--light-500);
+  border-left: 1px solid var(--light-500);
+  .banner-img {
     padding-bottom: 12px;
-    img{
+    img {
       width: 100%;
       max-height: 329px;
       height: 100%;
       object-fit: cover;
     }
   }
-  .actions{
+  .actions {
     display: flex;
     justify-content: space-between;
-    gap: 13px;
     padding-bottom: 26px;
-    .button-light{
-      width: 100%;
+    .button-light {
+      width: calc(25% - 13px);
       background-color: var(--primary-100);
       padding: 5px 10px;
       display: flex;
       align-items: center;
       gap: 5px;
-      img{
+      img {
         height: 28px;
         width: 28px;
       }
     }
   }
-  
 }
 .box-right {
-  border-left: 1px solid var(--light-500);
+  background-color: var(--white);
   .btns-wrapper {
     padding: 9px 14px;
     display: flex;
@@ -264,10 +268,11 @@ main {
     padding: 14px 9px 30px;
   }
   /* Style for the template selector container */
-  .template-selector-wrapper{
+  .template-selector-wrapper {
     background-color: var(--light-200);
     padding: 8px;
     margin: 9px;
+    margin-top: 0;
   }
   .template-selector {
     display: flex;
@@ -284,64 +289,169 @@ main {
       object-fit: cover;
     }
     .template.active {
-      border-color: var(--primary); 
+      border-color: var(--primary);
     }
   }
 }
 
+/* Your existing styles */
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown toggle/button */
+.dropdown-toggle {
+  background-color: #fff;
+  border: 1px solid var(--light-300);
+  padding: 2px 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+  &::after {
+    display: none !important;
+  }
+}
+
+/* Main selected icon */
+.selected-icon {
+  margin-right: 10px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Show dropdown content */
+.show {
+  display: block;
+}
 @media(max-width: 1399px){
-  .main-box{
-    border-bottom: 1px solid var(--light-500);
-
-  .banner-img{
-    img{
-      max-height: 100%;
-    }
-  }
-  }
-  .box-head{
-    min-height: 72px;
-  }
-  .box-right{
+  .template-selector-wrapper{
     .template-selector{
-      max-height: 210px;
+      max-height: 140px;
     }
   }
 }
-
-@media(max-width: 767px){
-  .main-box{
-    .actions{
-    flex-wrap: wrap;
-      .button-light{
-        width: 48%;
+@media (max-width: 1199px) {
+  main{
+    .inner-content-box {
+      border: none;
+    }
+  }
+  .main-box {
+    border: 1px solid var(--light-200);
+    .banner-img {
+      img {
+        max-height: 100%;
       }
     }
   }
-  .box-left{
-    border: 1px solid var(--light-500);
-    .box-left-body{
-      height: 100%;
+  .box-head {
+    min-height: 72px;
+  }
+  .box-right {
+    border: 1px solid var(--light-200);
+    .template-selector {
+      max-height: 210px;
     }
   }
-  .template-selector-wrapper.template-selector{
+  .box-left-wrapper{
+    background-color: transparent;
+  }
+  .box-left {
+    border: 1px solid var(--light-200);
+  }
+}
+
+@media (max-width: 767px) {
+  .box-head{
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .main-box {
+    border-bottom: 0;
+    padding-bottom: 0;
+    .actions {
+      flex-wrap: wrap;
+      padding-bottom: 0;
+      .button-light {
+        width: calc(25% - 8px);
+      }
+    }
+  }
+  .box-left {
+    border-top: 0;
+    .box-head{
+      padding-top: 0;
+    }
+    .box-left-body {
+      height: 100%;
+      margin-top: 0;
+    }
+    .add-btn{
+      padding: 7px 13px;
+      background-color: var(--light-200);
+      border-radius: 6px;
+    }
+  }
+  .template-selector-wrapper.template-selector {
     height: 100%;
     max-height: max-content;
   }
-  .box-right{
-    border-right: 1px solid var(--light-500);
-    .template-selector{
+  .box-right {
+    margin-top: 14px;
+    .box-right-body {
+      display: block;
+      padding-bottom: 10px;
+      label {
+        padding-bottom: 10px;
+      }
+    }
+    .btns-wrapper{
+      border-bottom: 0;
+      button{
+        width: 50%;
+      }
+    }
+    .template-selector-wrapper{
+      padding: 0;
+      background-color: transparent;
+    }
+    .template-selector {
       height: 100%;
       max-height: max-content;
     }
   }
 }
-@media(max-width: 576px){
-  .main-box{
-    .actions{
-      .button-light{
-        width: 100%;
+@media (max-width: 576px) {
+  .main-box {
+    .actions {
+      .button-light {
+        justify-content: center;
+        span {
+          display: none;
+        }
       }
     }
   }

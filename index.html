@@ -29,10 +29,10 @@
       </div>
       <!--- CONTENT BOX ---->
       <div class="inner-content-box">
-        <div class="row g-0">
-          <div class="col-xxl-3 col-md-6 order-2 order-xxl-1">
+        <div class="row g-xl-0 g-md-3">
+          <div class="col-xl-3 col-md-6 order-2 order-xl-1 box-left-wrapper">
             <!--- LEFT BOX --->
-            <div class="box-left h-100">
+            <div class="box-left h-md-100">
 
               <div class="box-head">
                 <label><b>Text on image</b></label>
@@ -66,13 +66,19 @@
                         <option value="Times New Roman">Times New Roman</option>
                         <!-- Add more font options here -->
                       </select>
-                      <select aria-label=".form-select-sm example" id="fontSelector">
-                        <option selected disabled data-icon="&#xf031;">Text Format</option>
-                        <option value="Arial">Arial</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <!-- Add more font options here -->
-                      </select>
+                      <div class="dropdown" id="dropdown1">
+                        <div class="dropdown-toggle" id="dropdownMenuButto1">
+                          <span class="selected-icon" ><img src="./media/aa.svg"/></span> <!-- This is the default main icon -->
+                          <span class="custom-arrow"><span><img src="./media/arrow.svg" /></span> <!-- Custom arrow icon -->
+                        </div>
+                        <div class="dropdown-menu">
+                          <button class="dropdown-item" data-value="bold"><span><img src="./media/aa.svg"/></span> </button>
+                          <button class="dropdown-item" data-value="bold"><span><i class="fas fa-bold"></i></span></button>
+                          <button class="dropdown-item" data-value="italic"><span><i class="fas fa-italic"></i></span></button>
+                          <button class="dropdown-item" data-value="underline"><span><i class="fas fa-underline"></i></span></button>
+                          <!-- Add more options with different icons as needed -->
+                        </div>
+                      </div>
                       <div class="d-flex">
                         <button class="btn btn-sm" id="boldButton"><i class="fas fa-bold"></i></button>
                         <button class="btn btn-sm" id="italicButton"><i class="fas fa-italic"></i></button>
@@ -108,13 +114,19 @@
                         <option value="Times New Roman">Times New Roman</option>
                         <!-- Add more font options here -->
                       </select>
-                      <select aria-label=".form-select-sm example" id="fontSelector">
-                        <option selected disabled data-icon="&#xf031;">Text Format</option>
-                        <option value="Arial">Arial</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <!-- Add more font options here -->
-                      </select>
+                      <div class="dropdown" id="dropdown2">
+                        <div class="dropdown-toggle" id="dropdownMenuButton2">
+                          <span class="selected-icon" ><img src="./media/aa.svg"/></span> <!-- This is the default main icon -->
+                          <span class="custom-arrow"><span><img src="./media/arrow.svg" /></span> <!-- Custom arrow icon -->
+                        </div>
+                        <div class="dropdown-menu">
+                          <button class="dropdown-item" data-value="bold"><span><img src="./media/aa.svg"/></span> </button>
+                          <button class="dropdown-item" data-value="bold"><span><i class="fas fa-bold"></i></span></button>
+                          <button class="dropdown-item" data-value="italic"><span><i class="fas fa-italic"></i></span></button>
+                          <button class="dropdown-item" data-value="underline"><span><i class="fas fa-underline"></i></span></button>
+                          <!-- Add more options with different icons as needed -->
+                        </div>
+                      </div>
                       <div class="d-flex">
                         <button class="btn btn-sm" id="boldButton"><i class="fas fa-bold"></i></button>
                         <button class="btn btn-sm" id="italicButton"><i class="fas fa-italic"></i></button>
@@ -150,13 +162,19 @@
                         <option value="Times New Roman">Times New Roman</option>
                         <!-- Add more font options here -->
                       </select>
-                      <select aria-label=".form-select-sm example" id="fontSelector">
-                        <option selected disabled data-icon="&#xf031;">Text Format</option>
-                        <option value="Arial">Arial</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <!-- Add more font options here -->
-                      </select>
+                      <div class="dropdown" id="dropdown3">
+                        <div class="dropdown-toggle" id="dropdownMenuButton3">
+                          <span class="selected-icon" ><img src="./media/aa.svg"/></span> <!-- This is the default main icon -->
+                          <span class="custom-arrow"><span><img src="./media/arrow.svg" /></span> <!-- Custom arrow icon -->
+                        </div>
+                        <div class="dropdown-menu">
+                          <button class="dropdown-item" data-value="bold"><span><img src="./media/aa.svg"/></span> </button>
+                          <button class="dropdown-item" data-value="bold"><span><i class="fas fa-bold"></i></span></button>
+                          <button class="dropdown-item" data-value="italic"><span><i class="fas fa-italic"></i></span></button>
+                          <button class="dropdown-item" data-value="underline"><span><i class="fas fa-underline"></i></span></button>
+                          <!-- Add more options with different icons as needed -->
+                        </div>
+                      </div>
                       <div class="d-flex">
                         <button class="btn btn-sm" id="boldButton"><i class="fas fa-bold"></i></button>
                         <button class="btn btn-sm" id="italicButton"><i class="fas fa-italic"></i></button>
@@ -167,28 +185,34 @@
 
                 </div>
               </div>
+              <div class="action-buttons p-3 d-md-none d-block">
+                <button class="btn button-primary w-100"><img src="./media/white-rotate.svg" />Generate Your Meme</button>
+                <button class="btn button-primary-outlined w-100">Reset text</button>
+              </div>
             </div>
           </div>
-          <div class="col-xxl-6 order-1 order-xxl-2">
+          <div class="col-xl-6 order-1 order-xl-2">
             <div class="main-box">
               <div class="banner-img">
                 <img class="w-100" src="./media/banner.jpeg" alt="meme-img">
               </div>
               <div class="actions">
-                <button class="btn button-light"><img src="./media/Rotate.svg" />Rotate</button>
-                <button class="btn button-light"><img src="./media/Workspaces.svg" />Spacing</button>
-                <button class="btn button-light"><img src="./media/Add.svg" />Add Icon</button>
-                <button class="btn button-light"><img src="./media/Brush.svg" />Drawing</button>
+                <button class="btn button-light"><img src="./media/Rotate.svg" /><span>Rotate</span></button>
+                <button class="btn button-light"><img src="./media/Workspaces.svg" /><span>Spacing</span></button>
+                <button class="btn button-light"><img src="./media/Add.svg" /><span>Add Icon</span></button>
+                <button class="btn button-light"><img src="./media/Brush.svg" /><span>Drawing</span></button>
               </div>
-              <button class="btn button-primary w-100"><img src="./media/white-rotate.svg" />Generate Your Meme</button>
-              <button class="btn button-primary-outlined w-100">Reset text</button>
+              <div class="action-buttons d-md-block d-none">
+                <button class="btn button-primary w-100"><img src="./media/white-rotate.svg" />Generate Your Meme</button>
+                <button class="btn button-primary-outlined w-100">Reset text</button>
+              </div>
             </div>
           </div>
-          <div class="col-xxl-3 col-md-6 order-3 order-xxl-3">
+          <div class="col-xl-3 col-md-6 order-3 order-xl-3">
             <div class="box-right h-100">
               <div class="box-head">
-                <label><b>Text on image</b></label>
-                <button class="reset-btn">Reset</button>
+                <label><b>Your mind change</b></label>
+                <button class="reset-btn d-lg-flex d-none">Reset</button>
               </div>
               <div class="btns-wrapper">
                 <button class="outline-primary-btn button btn">Blank Image</button>
@@ -221,7 +245,7 @@
                   <img src="./media/Rectangle 5.jpeg" class="template" onclick="selectTemplate(this)" alt="Template 5">
                 </div>
               </div>
-              <div class="px-2 w-100">
+              <div class="px-2 w-100 d-lg-none">
                 <button class="btn button-primary-outlined w-100 danger">Reset text</button>
               </div>
             </div>
@@ -234,17 +258,57 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script>
-    // Function to handle template selection
-    function selectTemplate(element) {
-      // Remove the 'active' class from all images
-      const templates = document.querySelectorAll('.template');
-      templates.forEach(template => {
-        template.classList.remove('active');
-      });
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdowns = document.querySelectorAll('.dropdown');
+  let currentDropdown = null;
 
-      // Add the 'active' class to the clicked image
-      element.classList.add('active');
-    }
+  dropdowns.forEach(function(dropdown) {
+    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+    const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+
+    dropdownToggle.addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent dropdown from closing when toggle is clicked
+
+      if (currentDropdown && currentDropdown !== dropdownMenu) {
+        currentDropdown.classList.remove('show');
+      }
+
+      dropdownMenu.classList.toggle('show');
+      currentDropdown = dropdownMenu;
+    });
+
+    dropdownItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        const selectedValue = this.getAttribute('data-value');
+        const selectedIcon = dropdown.querySelector('.selected-icon');
+        const selectedOption = this.querySelector('span').innerHTML;
+        const altText = this.querySelector('span img').getAttribute('alt');
+
+        selectedIcon.innerHTML = selectedOption;
+        console.log('Selected Option Alt:', altText);
+
+        dropdownMenu.classList.remove('show');
+        currentDropdown = null;
+        // Perform actions based on the selected value (e.g., apply formatting)
+      });
+    });
+
+    // Close dropdown when clicking outside of it
+    document.addEventListener('click', function(event) {
+      const isClickedInside = dropdown.contains(event.target);
+      if (!isClickedInside) {
+        dropdownMenu.classList.remove('show');
+        currentDropdown = null;
+      }
+    });
+  });
+});
+
+
+
+
+
 
   </script>
 </body>
