@@ -51,7 +51,7 @@
                     <!-- MAIN INPUT -->
                     <div class="main-input">
                       <input type="text" placeholder="Type your text here" class="w-100">
-                      <button><i class="fa-solid fa-gear"></i></button>
+                      <button id="gearButton"><i class="fa-solid fa-gear"></i></button>
                     </div>
                     <!-- ACTIONS -->
                     <div class="d-flex gap-2">
@@ -67,29 +67,56 @@
                         <!-- Add more font options here -->
                       </select>
                       <div class="dropdown" id="dropdown1">
-                        <div class="dropdown-toggle" id="dropdownMenuButto1">
-                          <span class="selected-icon" ><img src="./media/aa.svg"/></span> <!-- This is the default main icon -->
-                          <span class="custom-arrow"><span><img src="./media/arrow.svg" /></span> <!-- Custom arrow icon -->
+                        <div class="dropdown-toggle" id="dropdownMenuButton">
+                          <span class="selected-icon"><img src="./media/aa.svg" /></span>
+                          <!-- This is the default main icon -->
+                          <span class="custom-arrow"><img src="./media/arrow.svg" /></span>
+                          <!-- Custom arrow icon -->
                         </div>
                         <div class="dropdown-menu">
-                          <button class="dropdown-item" data-value="bold"><span><img src="./media/aa.svg"/></span> </button>
-                          <button class="dropdown-item" data-value="bold"><span><i class="fas fa-bold"></i></span></button>
-                          <button class="dropdown-item" data-value="italic"><span><i class="fas fa-italic"></i></span></button>
-                          <button class="dropdown-item" data-value="underline"><span><i class="fas fa-underline"></i></span></button>
+                          <button class="dropdown-item" data-value="lowercase"><span>Lower</span></button>
+                          <button class="dropdown-item" data-value="sentence_case"><span>Sentence</span></button>
+                          <button class="dropdown-item" data-value="uppercase"><span>Upper</span></button>
                           <!-- Add more options with different icons as needed -->
                         </div>
                       </div>
+                      
                       <div class="d-flex">
                         <button class="btn btn-sm" id="boldButton"><i class="fas fa-bold"></i></button>
                         <button class="btn btn-sm" id="italicButton"><i class="fas fa-italic"></i></button>
                         <button class="btn btn-sm" id="underlineButton"><i class="fas fa-underline"></i></button>
                       </div>
                     </div>
+                    <div class="more-settings">
+                      <div class="row g-3">
+                        <div class="col-6 setting-col pe-1">
+                          <label class="text-h6" for="text-size">Text Size</label>
+                          <div class="input-px">
+                            <input type="text" id="pixelInput" class="px-input">
+                          </div>
+                        </div>
+                        <div class="col-6 setting-col ps-1">
+                          <label class="text-h6" for="text-size">Text Size</label>
+                          <div class="input-px">
+                            <input type="text">
+                          </div>
+                        </div>
+                        <div class="col-6 setting-col">
+                          <label class="text-h6" for="text-size">Shadow</label>
+                          <input type="checkbox"">
+                          <span class="checkmark"></span>
+                        </div>
+                        <div class="col-6 setting-col">
+                          <label class="text-h6" for="text-size">Opacity</label>
+                          <input type="range" min="0" max="100" value="100">
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                 </div>
-                <!-- INNER BOX -->
-                <div class="inner-box">
+                 <!-- INNER BOX -->
+                 <div class="inner-box">
                   <div class="inner-box-head">
                     <h6 class="heading">Text # 1</h6>
                     <Button>Delete<i class="fa-solid fa-xmark"></i></Button>
@@ -99,7 +126,7 @@
                     <!-- MAIN INPUT -->
                     <div class="main-input">
                       <input type="text" placeholder="Type your text here" class="w-100">
-                      <button><i class="fa-solid fa-gear"></i></button>
+                      <button id="gearButton"><i class="fa-solid fa-gear"></i></button>
                     </div>
                     <!-- ACTIONS -->
                     <div class="d-flex gap-2">
@@ -114,30 +141,58 @@
                         <option value="Times New Roman">Times New Roman</option>
                         <!-- Add more font options here -->
                       </select>
-                      <div class="dropdown" id="dropdown2">
-                        <div class="dropdown-toggle" id="dropdownMenuButton2">
-                          <span class="selected-icon" ><img src="./media/aa.svg"/></span> <!-- This is the default main icon -->
-                          <span class="custom-arrow"><span><img src="./media/arrow.svg" /></span> <!-- Custom arrow icon -->
+                      <div class="dropdown" id="dropdown1">
+                        <div class="dropdown-toggle" id="dropdownMenuButton">
+                          <span class="selected-icon"><img src="./media/aa.svg" /></span>
+                          <!-- This is the default main icon -->
+                          <span class="custom-arrow"><img src="./media/arrow.svg" /></span>
+                          <!-- Custom arrow icon -->
                         </div>
                         <div class="dropdown-menu">
-                          <button class="dropdown-item" data-value="bold"><span><img src="./media/aa.svg"/></span> </button>
-                          <button class="dropdown-item" data-value="bold"><span><i class="fas fa-bold"></i></span></button>
-                          <button class="dropdown-item" data-value="italic"><span><i class="fas fa-italic"></i></span></button>
-                          <button class="dropdown-item" data-value="underline"><span><i class="fas fa-underline"></i></span></button>
+                          <button class="dropdown-item" data-value="lowercase"><span>Lower</span></button>
+                          <button class="dropdown-item" data-value="sentence_case"><span>Sentence</span></button>
+                          <button class="dropdown-item" data-value="uppercase"><span>Upper</span></button>
                           <!-- Add more options with different icons as needed -->
                         </div>
                       </div>
+                      
                       <div class="d-flex">
                         <button class="btn btn-sm" id="boldButton"><i class="fas fa-bold"></i></button>
                         <button class="btn btn-sm" id="italicButton"><i class="fas fa-italic"></i></button>
                         <button class="btn btn-sm" id="underlineButton"><i class="fas fa-underline"></i></button>
                       </div>
                     </div>
+                    <div class="more-settings">
+                      <div class="row g-3">
+                        <div class="col-6 setting-col pe-1">
+                          <label class="text-h6" for="text-size">Text Size</label>
+                          <div class="input-px">
+                            <input type="text" id="pixelInput" class="px-input">
+                          </div>
+                        </div>
+                        <div class="col-6 setting-col ps-1">
+                          <label class="text-h6" for="text-size">Text Size</label>
+                          <div class="input-px">
+                            <input type="text">
+                          </div>
+                        </div>
+                        <div class="col-6 setting-col">
+                          <label class="text-h6" for="text-size">Shadow</label>
+                          <input type="checkbox"">
+                          <span class="checkmark"></span>
+                        </div>
+                        <div class="col-6 setting-col">
+                          <label class="text-h6" for="text-size">Opacity</label>
+                          <input type="range" min="0" max="100" value="100">
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                 </div>
-                <!-- INNER BOX -->
-                <div class="inner-box">
+
+                 <!-- INNER BOX -->
+                 <div class="inner-box">
                   <div class="inner-box-head">
                     <h6 class="heading">Text # 1</h6>
                     <Button>Delete<i class="fa-solid fa-xmark"></i></Button>
@@ -147,7 +202,7 @@
                     <!-- MAIN INPUT -->
                     <div class="main-input">
                       <input type="text" placeholder="Type your text here" class="w-100">
-                      <button><i class="fa-solid fa-gear"></i></button>
+                      <button id="gearButton"><i class="fa-solid fa-gear"></i></button>
                     </div>
                     <!-- ACTIONS -->
                     <div class="d-flex gap-2">
@@ -162,23 +217,50 @@
                         <option value="Times New Roman">Times New Roman</option>
                         <!-- Add more font options here -->
                       </select>
-                      <div class="dropdown" id="dropdown3">
-                        <div class="dropdown-toggle" id="dropdownMenuButton3">
-                          <span class="selected-icon" ><img src="./media/aa.svg"/></span> <!-- This is the default main icon -->
-                          <span class="custom-arrow"><span><img src="./media/arrow.svg" /></span> <!-- Custom arrow icon -->
+                      <div class="dropdown" id="dropdown1">
+                        <div class="dropdown-toggle" id="dropdownMenuButton">
+                          <span class="selected-icon"><img src="./media/aa.svg" /></span>
+                          <!-- This is the default main icon -->
+                          <span class="custom-arrow"><img src="./media/arrow.svg" /></span>
+                          <!-- Custom arrow icon -->
                         </div>
                         <div class="dropdown-menu">
-                          <button class="dropdown-item" data-value="bold"><span><img src="./media/aa.svg"/></span> </button>
-                          <button class="dropdown-item" data-value="bold"><span><i class="fas fa-bold"></i></span></button>
-                          <button class="dropdown-item" data-value="italic"><span><i class="fas fa-italic"></i></span></button>
-                          <button class="dropdown-item" data-value="underline"><span><i class="fas fa-underline"></i></span></button>
+                          <button class="dropdown-item" data-value="lowercase"><span>Lower</span></button>
+                          <button class="dropdown-item" data-value="sentence_case"><span>Sentence</span></button>
+                          <button class="dropdown-item" data-value="uppercase"><span>Upper</span></button>
                           <!-- Add more options with different icons as needed -->
                         </div>
                       </div>
+                      
                       <div class="d-flex">
                         <button class="btn btn-sm" id="boldButton"><i class="fas fa-bold"></i></button>
                         <button class="btn btn-sm" id="italicButton"><i class="fas fa-italic"></i></button>
                         <button class="btn btn-sm" id="underlineButton"><i class="fas fa-underline"></i></button>
+                      </div>
+                    </div>
+                    <div class="more-settings">
+                      <div class="row g-3">
+                        <div class="col-6 setting-col pe-1">
+                          <label class="text-h6" for="text-size">Text Size</label>
+                          <div class="input-px">
+                            <input type="text" id="pixelInput" class="px-input">
+                          </div>
+                        </div>
+                        <div class="col-6 setting-col ps-1">
+                          <label class="text-h6" for="text-size">Text Size</label>
+                          <div class="input-px">
+                            <input type="text">
+                          </div>
+                        </div>
+                        <div class="col-6 setting-col">
+                          <label class="text-h6" for="text-size">Shadow</label>
+                          <input type="checkbox"">
+                          <span class="checkmark"></span>
+                        </div>
+                        <div class="col-6 setting-col">
+                          <label class="text-h6" for="text-size">Opacity</label>
+                          <input type="range" min="0" max="100" value="100">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -258,16 +340,16 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const dropdowns = document.querySelectorAll('.dropdown');
   let currentDropdown = null;
 
-  dropdowns.forEach(function(dropdown) {
+  dropdowns.forEach(function (dropdown) {
     const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
     const dropdownMenu = dropdown.querySelector('.dropdown-menu');
     const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
 
-    dropdownToggle.addEventListener('click', function(event) {
+    dropdownToggle.addEventListener('click', function (event) {
       event.stopPropagation(); // Prevent dropdown from closing when toggle is clicked
 
       if (currentDropdown && currentDropdown !== dropdownMenu) {
@@ -278,24 +360,28 @@ document.addEventListener('DOMContentLoaded', function() {
       currentDropdown = dropdownMenu;
     });
 
-    dropdownItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-        const selectedValue = this.getAttribute('data-value');
-        const selectedIcon = dropdown.querySelector('.selected-icon');
-        const selectedOption = this.querySelector('span').innerHTML;
-        const altText = this.querySelector('span img').getAttribute('alt');
+    dropdownItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        const selectedOption = this.getAttribute('data-value');
+        const selectedText = this.querySelector('span').textContent;
 
-        selectedIcon.innerHTML = selectedOption;
-        console.log('Selected Option Alt:', altText);
+        const selectedIcon = dropdown.querySelector('.selected-icon');
+        const selectedImage = this.querySelector('img');
+
+        if (selectedImage) {
+          selectedIcon.innerHTML = `<img src="${selectedImage.src}" alt="${selectedText}" />`;
+        } else {
+          selectedIcon.textContent = selectedText;
+        }
 
         dropdownMenu.classList.remove('show');
         currentDropdown = null;
+        console.log('Selected Value:', selectedOption);
         // Perform actions based on the selected value (e.g., apply formatting)
       });
     });
 
-    // Close dropdown when clicking outside of it
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       const isClickedInside = dropdown.contains(event.target);
       if (!isClickedInside) {
         dropdownMenu.classList.remove('show');
@@ -303,6 +389,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});
+
+
+// Add click event listener to the gear button
+document.addEventListener('click', function(event) {
+  const gearButton = event.target.closest('#gearButton');
+  
+  if (gearButton) {
+    const parentWrapper = gearButton.closest('.inner-box-input-wrapper');
+    
+    if (parentWrapper) {
+      const moreSettings = parentWrapper.querySelector('.more-settings');
+      
+      if (moreSettings) {
+        moreSettings.classList.toggle('show');
+      }
+    }
+  }
 });
 
 

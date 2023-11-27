@@ -4,6 +4,7 @@
   --white: #fff;
   --light: #f2f2f2;
   --light-200: #eaeaea;
+  --light-400: #b2b2b2;
   --light-300: #dbdada;
   --light-500: #0000004d;
   --darker: #333333;
@@ -224,6 +225,95 @@ main .inner-content-box {
   height: 27px;
   width: 27px;
 }
+.box-left .box-left-body .inner-box-input-wrapper .more-settings {
+  padding: 16px 16px 0;
+  display: none;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings.show {
+  display: block;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings .setting-col {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings label {
+  width: 60px;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input {
+  width: 100%;
+  height: 29px;
+  max-width: 64px;
+  border: 1px solid var(--light-300);
+  border-radius: 2px;
+  background-color: var(--white);
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input:focus {
+  outline: none;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 3px;
+  height: 21px;
+  width: 21px;
+  border: 1px solid var(--light-300);
+  position: relative;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input[type=checkbox]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4.5px;
+  left: 4.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid var(--primary);
+  background-color: var(--primary);
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11px;
+  height: 11px;
+  background: #000;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input[type=range]::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border-radius: 50px;
+  background: #000;
+  cursor: pointer;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings input[type=text] {
+  padding-right: 24px;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings .input-px {
+  position: relative;
+}
+.box-left .box-left-body .inner-box-input-wrapper .more-settings .input-px::after {
+  content: "px";
+  position: absolute;
+  color: var(--light-400);
+  font-size: 14px;
+  font-size: 14px;
+  right: 7px;
+  top: 3px;
+}
 
 .main-box {
   padding: 19px;
@@ -327,7 +417,7 @@ main .inner-content-box {
 
 /* Main selected icon */
 .selected-icon {
-  margin-right: 10px;
+  font-size: 12px;
 }
 
 /* Dropdown menu */
@@ -339,6 +429,9 @@ main .inner-content-box {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+.dropdown-menu.show {
+  display: block;
+}
 
 /* Dropdown items */
 .dropdown-item {
@@ -348,11 +441,6 @@ main .inner-content-box {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-
-/* Show dropdown content */
-.show {
-  display: block;
 }
 
 @media (max-width: 1399px) {

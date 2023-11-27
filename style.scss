@@ -4,6 +4,7 @@
   --white: #fff;
   --light: #f2f2f2;
   --light-200: #eaeaea;
+  --light-400: #b2b2b2;
   --light-300: #dbdada;
   --light-500: #0000004d;
   --darker: #333333;
@@ -13,6 +14,7 @@
   --text-base: 18px;
   --text-xs: 14px;
 }
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -153,7 +155,7 @@ main {
     border-color: var(--danger);
   }
 }
-.box-left-wrapper{
+.box-left-wrapper {
   background-color: #fff;
 }
 .box-left {
@@ -214,6 +216,99 @@ main {
           border: 2px solid var(--light);
           height: 27px;
           width: 27px;
+        }
+      }
+
+      .more-settings {
+        padding: 16px 16px 0;
+        display: none;
+        &.show{
+          display: block;
+        }
+        .setting-col {
+          padding: 0;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        label {
+          width: 60px;
+        }
+        input {
+          width: 100%;
+          height: 29px;
+          max-width: 64px;
+          border: 1px solid var(--light-300);
+          border-radius: 2px;
+          background-color: var(--white);
+          &:focus {
+            outline: none;
+          }
+        }
+        input[type="checkbox"] {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          padding: 3px;
+          height: 21px;
+          width: 21px;
+          border: 1px solid var(--light-300);
+          position: relative;
+          &:checked {
+            &::before {
+              content: "";
+              position: absolute;
+              top: 4.5px;
+              left: 4.5px;
+              width: 10px;
+              height: 10px;
+              border-radius: 1px;
+              border: solid var(--primary);
+              background-color: var(--primary);
+            }
+          }
+        }
+        input[type="range"] {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 3px;
+          padding: 0;
+          background: #d3d3d3;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 11px;
+            height: 11px;
+            background: #000;
+            border-radius: 50px;
+            cursor: pointer;
+          }
+          &::-moz-range-thumb {
+            width: 11px;
+            height: 11px;
+            border-radius: 50px;
+            background: #000;
+            cursor: pointer;
+          }
+        }
+        input[type="text"] {
+          padding-right: 24px;
+        }
+        .input-px{
+          position: relative;
+          &::after{
+            content: 'px';
+            position: absolute;
+            color: var(--light-400);
+            font-size: 14px;
+            font-size: 14px;
+            right: 7px;
+            top: 3px;
+          }
         }
       }
     }
@@ -319,7 +414,7 @@ main {
 
 /* Main selected icon */
 .selected-icon {
-  margin-right: 10px;
+  font-size: 12px;
 }
 
 /* Dropdown menu */
@@ -330,6 +425,9 @@ main {
   min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  &.show {
+    display: block;
+  }
 }
 
 /* Dropdown items */
@@ -342,19 +440,15 @@ main {
   align-items: center;
 }
 
-/* Show dropdown content */
-.show {
-  display: block;
-}
-@media(max-width: 1399px){
-  .template-selector-wrapper{
-    .template-selector{
+@media (max-width: 1399px) {
+  .template-selector-wrapper {
+    .template-selector {
       max-height: 140px;
     }
   }
 }
 @media (max-width: 1199px) {
-  main{
+  main {
     .inner-content-box {
       border: none;
     }
@@ -376,7 +470,7 @@ main {
       max-height: 210px;
     }
   }
-  .box-left-wrapper{
+  .box-left-wrapper {
     background-color: transparent;
   }
   .box-left {
@@ -385,7 +479,7 @@ main {
 }
 
 @media (max-width: 767px) {
-  .box-head{
+  .box-head {
     border-bottom: 0;
     padding-bottom: 0;
   }
@@ -402,14 +496,14 @@ main {
   }
   .box-left {
     border-top: 0;
-    .box-head{
+    .box-head {
       padding-top: 0;
     }
     .box-left-body {
       height: 100%;
       margin-top: 0;
     }
-    .add-btn{
+    .add-btn {
       padding: 7px 13px;
       background-color: var(--light);
       border-radius: 6px;
@@ -428,13 +522,13 @@ main {
         padding-bottom: 10px;
       }
     }
-    .btns-wrapper{
+    .btns-wrapper {
       border-bottom: 0;
-      button{
+      button {
         width: 50%;
       }
     }
-    .template-selector-wrapper{
+    .template-selector-wrapper {
       padding: 0;
       background-color: transparent;
     }
