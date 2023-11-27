@@ -442,6 +442,9 @@ main .inner-content-box {
   display: flex;
   align-items: center;
 }
+.dropdown-item span {
+  font-size: 12px;
+}
 
 @media (max-width: 1399px) {
   .template-selector-wrapper .template-selector {
